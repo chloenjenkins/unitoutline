@@ -1,0 +1,243 @@
+.theme-black {
+    --color-1: black;
+    --color-2: white;
+    --color-3: #cecece;
+    --color-4: #818181;
+    --color-5: #6b707c;
+    --color-6: #2c2c2c;
+    --color-7: #1c1c1c;
+    --color-8: white;
+    --color-9: white;
+}
+.theme-white {
+    --color-1: white;
+    --color-2: black;
+    --color-3: #1c1c1c;
+    --color-4: #818181;
+    --color-5: #6b707c;
+    --color-6: #2c2c2c;
+    --color-7: #1c1c1c;
+    --color-8: white;
+    --color-9: #cfcbca;
+}
+
+body {
+    background-color: var(--color-1);
+    font-family: Helvetica, sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--color-8);
+}
+
+ header h3 {
+    text-align: center;
+    color: var(--color-8);
+    font-size:20px;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+
+}
+#main h2 {
+        color: var(--color-8);
+        text-align: center;
+    }
+#main h4 {
+        color: var(--color-2);
+        text-align: left;
+        font-size: 18px;
+    }
+#main p {
+        color: var(--color-3);
+        text-align: left;
+    }
+#main ul {
+        color: var(--color-3);
+        text-align: left;
+    }
+
+#main div { /* to hide all content until page is selected from menu*/
+    display: none;
+}
+#main div:target { /*to show only the selected page*/
+            display: block;
+            /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_target_tab*/
+        }
+
+
+.navmenu {
+    height: 100%; /* to cover length of page*/
+    width: 0; /* want a collapsible nav menu so I will change this with js */
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /*https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+    /*https://www.w3schools.com/css/css_navbar_vertical.asp*/
+}
+
+
+a {
+    color: var(--color-2);
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    display: block;
+    transition: 0.3s;
+
+}
+
+a:link{
+    color: var(--color-2);
+}
+a:visited{
+    color: var(--color-2);
+}
+a:hover {
+    color: var(--color-2);
+    background-color: var(--color-5);
+    opacity: 0.9;
+    padding: 8px 8px 8px 32px;
+    }
+/*https://www.w3schools.com/css/css_link.asp - used this site to as a refernce to help remove hyperlink colours*/
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: var(--color-2);
+    /*https://www.w3schools.com/howto/howto_js_sidenav.asp https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity*/
+}
+.open-button {
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--color-9);
+    /*https://www.w3schools.com/howto/howto_js_sidenav.asp https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity*/
+}
+
+.boxed {
+    background-color: var(--color-7);
+    border: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+header {
+    background-image: url("header.jpg");
+    background-repeat:repeat;
+    background-position:inherit;
+    width: 100%;
+    height:auto;
+    /*https://www.w3schools.com/cssref/pr_background-image.asp*/
+}
+
+#websiteheader {
+    transition: margin-left .5s;
+    padding: 20px;
+    position: center;
+    text-align: center;
+
+
+}
+
+#home {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#introduction {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#resources {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#assessments {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#information {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#calendar {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+#contacts {
+    padding: 20px;
+    border-bottom: solid;
+    border-top: solid;
+    border-width: thick;
+    border-color: var(--color-7);
+}
+
+.tab{
+    margin-left: 40px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+/* https://www.w3schools.com/howto/howto_css_image_center.asp */
+
+@media screen and (max-height: 450px) {
+    .navmenu {
+        padding-top: 15px;
+    }
+
+        .navmenu a {
+            font-size: 18px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+ 
